@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>boram board</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="./css/default.css">
+<title>boram board</title>
 </head>
 <body>
 	<h1>HELLO ~ :D</h1>
-	<div>
-		<h2><a href="#">THIS IS BOARD</a> : author / time</h2>
-	</div>
+	{% for post in posts %}
+		<div>
+			<h2><a href="#">{{ post.title }}</a> , {{ post.author }} / {{ post.published_date }}</h2>
+		</div>
+	{% endfor %}
 </body>
 </html>
