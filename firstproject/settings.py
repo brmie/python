@@ -106,6 +106,7 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'static'),
+    "/home/python-board.herokuapp.com/board/static",
 )
 
 # Simplified static file serving.
