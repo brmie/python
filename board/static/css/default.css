@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+* {margin:0; padding:0; box-sizing:border-box;}
+a {text-decoration: none;}
+
+h1 {margin:100px 0 50px; text-align:center;}
+
+.wrap {width:100%;}
+
+.list-wrap {width:1180px; margin:0 auto;}
+
+.list {width:300px; margin:15px 0; padding:15px; float:left;}
+.list:hover {background: #f3f3f3;}
+.list a {width: 100%; height: 100%; text-decoration: none;}
+
+.list span {display: block;}
+.post-title {font-size: 20pt; color:#915; margin:0 0 10px 0;}
+.create-time {font-size: 12pt; color:#999;}

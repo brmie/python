@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<link rel="stylesheet" type="text/css" href="./css/default.css">
-<title>boram board</title>
-</head>
-<body>
-	<h1>HELLO ~ :D</h1>
-	{% for post in posts %}
-		<div>
-			<h2><a href="#">{{ post.title }}</a> , {{ post.author }} / {{ post.published_date }}</h2>
+{% extends 'board/index.html' %}
+
+{% block content %}
+	{% for post in posts %}		
+		<div class="list">
+			<a href="{% url 'post_detail' pk=post.pk %}">
+				<span class="post-title">{{ post.title }}</span>
+				<span class="create-time">{{ post.author }} / {{ post.published_date }}</span>
+			</a>
 		</div>
 	{% endfor %}
-</body>
-</html>
+{% endblock content %}

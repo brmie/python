@@ -1,0 +1,12 @@
+{% extends 'board/index.html' %}
+
+{% block content %}
+	<div class="post">
+		<span class="detail-title">{{ post.title }}</span>
+		<span class="author-time">{{ post.author }} / {{ post.published_date }}</span>
+		<p>{{ post.text }}</p>
+	</div>
+	<div class="buttons">
+		<a class="list-btn" href="{% url 'post_list' %}">&lt; Go to List</a>
+	</div>
+{% endblock content %}
