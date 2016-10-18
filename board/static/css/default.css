@@ -21,7 +21,7 @@ textarea {width:100%; height:300px; border:none; border:2px #ccc solid;}
 
 .list span {display: block;}
 .post-title {font-size: 20pt; color:#a58; margin:0 0 10px 0;}
-.create-time {font-size: 12pt; color:#999;}
+.create-time {font-size: 11pt; color:#999;}
 
 .buttons {width:100%; float:left; text-align:center; margin:50px 0 0;}
 .buttons a, .save-btn {
