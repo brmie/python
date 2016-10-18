@@ -14,8 +14,6 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 import os
 import dj_database_url
 
-DATABASE_URL = 'postgresql:///python-board'
-
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
@@ -26,9 +24,9 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 SECRET_KEY = '&kz2+a36j5uz@^u6ulvz*5cq1u&6pd7l^y@z+vgfnl%ycfx#4p'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
-DEBUG = False
+DEBUG = True
 
 
 # Application definition
