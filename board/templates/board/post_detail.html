@@ -9,6 +9,18 @@
 	<div class="buttons">
 		<a class="list-btn" href="{% url 'post_list' %}">&lt; Go to List</a>
 		<a class="edit-btn" href="{% url 'post_edit' pk=post.pk %}">Edit Post</a>
-		<a class="delete-btn" href="{% url 'post_delete' pk=post.pk %}">Delete Post ㅠ.ㅠ</a>
+		<a class="delete-btn" id="postDelete" href="#">Delete Post ㅠ.ㅠ</a>
 	</div>
+
+	<script type="text/javascript">
+		var btn = document.getElementById("postDelete");
+		
+		btn.click(function(e){
+			e.preventDefault()
+			if(confirm("정말 지울거예여????")){
+				this.href("{% url 'post_delete' pk=post.pk %}")
+			}
+		});
+
+	</script>
 {% endblock content %}
