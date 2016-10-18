@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'firstproject.wsgi.application'
 
 # DATABASES['default'] = dj_database_url.config()
 DATABASES = {
-    'default': dj_database_url.config()
+    'default': dj_database_url.config(default='sqlite:///db.sqlite')
 }
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
