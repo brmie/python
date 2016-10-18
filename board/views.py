@@ -22,7 +22,7 @@ def post_new(request):
 		if form.is_valid():
 			post = form.save(commit=False)
 			if request.user:
-				post.author = User.objects.create_user('anonymous'+str(User.objects.all().count), 'aa@aa.com', '1234')
+				post.author = User.objects.create_user('anonymous'+str(User.objects.all().count()), 'aa@aa.com', '1234')
 
 			else:
 				post.author = request.user
