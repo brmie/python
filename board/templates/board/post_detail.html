@@ -15,12 +15,14 @@
 	<script type="text/javascript">
 		var btn = document.getElementById("postDelete");
 		
-		btn.click(function(e){
-			e.preventDefault()
-			if(confirm("정말 지울거예여????")){
-				this.href("{% url 'post_delete' pk=post.pk %}")
-			}
-		});
+		alert(btn);
+
+		// btn.click(function(e){
+		// 	e.preventDefault()
+		// 	if(confirm("정말 지울거예여????")){
+		// 		this.href("{% url 'post_delete' pk=post.pk %}")
+		// 	}
+		// });
 
 	</script>
 {% endblock content %}
