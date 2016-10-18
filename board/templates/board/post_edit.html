@@ -1,0 +1,13 @@
+{% extends 'board/index.html' %}
+
+{% block content %}
+	<div class="post_write">
+		<form method="POST" class="post-form">{% csrf_token %}
+			{{ form.as_p }}
+			<div class="buttons">
+				<a class="list-btn" href="{% url 'post_list' %}">&lt; Go to List</a>
+				<button type="submit" class="save-btn">글올리기 &gt;_o</button>
+			</div>
+		</form>
+	</div>
+{% endblock%}

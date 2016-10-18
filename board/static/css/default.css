@@ -1,18 +1,40 @@
 @charset "utf-8";
 
 * {margin:0; padding:0; box-sizing:border-box;}
-a {text-decoration: none;}
+a, button {text-decoration: none; border:none;}
 
 h1 {margin:100px 0 50px; text-align:center;}
 
-.wrap {width:100%;}
+form p {margin:15px 0;}
+input {width:300px; height:30px; border:none; border-bottom:2px #ccc solid;}
+textarea {width:100%; height:300px; border:none; border:2px #ccc solid;}
 
-.list-wrap {width:1180px; margin:0 auto;}
+#title {color:#333;}
 
-.list {width:300px; margin:15px 0; padding:15px; float:left;}
+.wrap {width:1180px; margin:0 auto;}
+
+.list-wrap {width:100%; float:left; padding:0 0 50px 0;}
+
+.list {width:295px; margin:15px 0; padding:15px; float:left;}
 .list:hover {background: #f3f3f3;}
 .list a {width: 100%; height: 100%; text-decoration: none;}
 
 .list span {display: block;}
-.post-title {font-size: 20pt; color:#915; margin:0 0 10px 0;}
+.post-title {font-size: 20pt; color:#a58; margin:0 0 10px 0;}
 .create-time {font-size: 12pt; color:#999;}
+
+.buttons {width:100%; float:left; text-align:center; margin:50px 0 0;}
+.buttons a, .save-btn {
+	font-size:14pt;
+	font-weight: bold;
+	color:#fff;
+	background:#a58;
+	margin:0 10px;
+	padding: 12px 30px 10px;
+	border-radius:15px;
+}
+
+.buttons a:hover, .save-btn:hover{
+	color:#fff;
+	background:#d8a;
+}
