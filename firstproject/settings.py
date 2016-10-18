@@ -104,7 +104,7 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (
+STATICFILES_DIR = (
     os.path.join(PROJECT_ROOT, 'static'),
 )
 
