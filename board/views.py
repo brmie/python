@@ -22,7 +22,8 @@ def post_new(request):
 		if form.is_valid():
 			post = form.save(commit=False)
 			if request.user:
-				post.author = User.objects.create_user('anonymous'+str(User.objects.all().count()), 'aa@aa.com', '1234')
+				# post.author = User.objects.create_user('anonymous'+str(User.objects.all().count()), 'aa@aa.com', '1234')
+				post.author = User.objects.get(username='anonymous')
 
 			else:
 				post.author = request.user
@@ -40,7 +41,8 @@ def post_edit(request, pk):
         form = PostForm(request.POST, instance=post)
         if form.is_valid():
             post = form.save(commit=False)
-            post.author = request.user
+            # post.author = request.user
+            post.author = User.objects.get(username='anonymous')
             post.published_date = timezone.now()
             post.save()
             return redirect('blog.views.post_detail', pk=post.pk)
