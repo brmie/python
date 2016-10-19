@@ -45,7 +45,7 @@ def post_edit(request, pk):
             post.author = User.objects.get(username='anonymous')
             post.published_date = timezone.now()
             post.save()
-            return redirect('blog.views.post_detail', pk=post.pk)
+            return redirect('board.views.post_detail', pk=post.pk)
     else:
         form = PostForm(instance=post)
     return render(request, 'board/post_edit.html', {'form': form})
