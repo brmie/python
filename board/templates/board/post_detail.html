@@ -18,7 +18,7 @@
 		btn.onclick=function(e){
 			e.preventDefault();
 			if(confirm("정말 지울거예여????")){
-				this.href("{% url 'post_delete' pk=post.pk %}")
+				location.href = "{% url 'post_delete' pk=post.pk %}";
 			}
 		};
 
