@@ -10,7 +10,23 @@ from .forms import PostForm
 
 def post_list(request):
 	posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-	return render(request, 'board/post_list.html', {'posts':posts})
+	
+	allPost = post.count()
+	cutNum = 4
+	pageNum = 3
+
+	if allPost%cutNum > 0 :
+		lastNum = round(allPost/cutNum+0.5)
+	else lastNum = allPost/cutNum
+
+	# showPost = posts[x] for x in range(lastNum)
+	showPost = []
+
+	for x in range(lastNum):
+		showPost.appand(posts[x])
+
+
+	return render(request, 'board/post_list.html', {'posts':showPost})
 
 def post_detail(request, pk):
 	post = get_object_or_404(Post, pk=pk)
