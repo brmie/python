@@ -65,7 +65,7 @@ def post_list(request, nowPage):
 	print('showPage ====', showPage)
 	print('showPost ====', showPost)
 
-	return render(request, 'board/post_list.html', {'posts':showPost, 'pages':showPage})
+	return render(request, 'board/post_list.html', {'posts':showPost})
 
 
 
