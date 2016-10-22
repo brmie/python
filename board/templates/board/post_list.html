@@ -1,20 +1,20 @@
 {% extends 'board/index.html' %}
 
 {% block content %}
-	{# {% for post in posts %}		
+	{% for post in posts %}		
 		<div class="list">
 			<a href="{% url 'post_detail' pk=post.pk %}">
 				<span class="post-title">{{ post.title }}</span>
 				<span class="create-time">{{ post.author }} / {{ post.published_date }}</span>
 			</a>
 		</div>
-	{% endfor %} #}
+	{% endfor %}
 
-	{# <div class="paging">
+	<div class="paging">
 		{% for page in pages %}
-			<a href="{% url 'post_list' nowPage %}" class="page pageNum{{ page }}">{{ page }}</a>
+			<a href="{% url 'post_list' nowPage=page %}" class="page pageNum{{ page }}">{{ page }}</a>
 		{% endfor %}
-	</div> #}
+	</div>
 
 	<div class="buttons">
 		<a class="new-btn" href="{% url 'post_new' %}">글쓰깅 &gt;0&lt;</a>
