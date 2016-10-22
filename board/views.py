@@ -67,21 +67,10 @@ def post_list(request, nowPage):
 	return render(request, 'board/post_list.html', {'posts':showPost, 'pages':showPage, 'nowPage':nowPage})
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-def post_detail(request, pk):
+def post_detail(request, pk, nowPage):
 	post = get_object_or_404(Post, pk=pk)
-	return render(request, 'board/post_detail.html', {'post':post})
+	nowPage = int(nowPage)
+	return render(request, 'board/post_detail.html', {'post':post, 'nowPage':nowPage})
 
 def post_new(request):
 	if request.method == "POST":
