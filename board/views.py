@@ -15,7 +15,6 @@ from .forms import PostForm
 
 
 def post_list(request, nowPage):
-	post = get_object_or_404(Post, pk=pk)
 
 	# 모든 포스트
 	posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
