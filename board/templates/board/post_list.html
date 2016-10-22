@@ -10,6 +10,11 @@
 		</div>
 	{% endfor %}
 
+	<div class="paging">
+		{% for page in pages %}
+			<a href="{% url 'post_list' nowPage={{page}} %}" class="page pageNum{{page}}">{{ page }}</a>
+		{% endfor %}
+	</div>
 
 	<div class="buttons">
 		<a class="new-btn" href="{% url 'post_new' %}">글쓰깅 &gt;0&lt;</a>

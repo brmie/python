@@ -38,3 +38,7 @@ textarea {width:100%; height:300px; border:none; border:2px #ccc solid;}
 	color:#fff;
 	background:#d8a;
 }
+
+.paging {float: left;}
+.page {color:red;}
+.page:hover {color:blue;}

@@ -4,29 +4,70 @@ from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
 from django.contrib.auth.models import User
 
-
 from .models import Post
 from .forms import PostForm
 
-def post_list(request):
+def post_list(request, nowPage):
+
+	# 모든 포스트
 	posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
 	
-	allPost = post.count()
+	# 총 포스트 23개
+	allPost = posts.count()
+
+	# 글 몇개씩 자를지
 	cutNum = 4
-	pageNum = 3
+
+	# 페이지 몇개씩 자를지
+	pageCut = 5
 
 	if allPost%cutNum > 0 :
-		lastNum = round(allPost/cutNum+0.5)
-	else lastNum = allPost/cutNum
+		lastPageNum = round(allPost/cutNum+0.5)
+	else: lastPageNum = int(allPost/cutNum)
 
-	# showPost = posts[x] for x in range(lastNum)
+	if nowPage > 2:
+		startPageNum = nowPage-2
+	else: startPageNum = 1
+
+	print('startPageNum ======', startPageNum)
+	print('lastPageNum ======', lastPageNum)
+
 	showPost = []
+	showPage = []
 
-	for x in range(lastNum):
-		showPost.appand(posts[x])
+	if startPageNum <= lastPageNum-4:
+		for x in range(pageCut):
+		 	showPage.append(startPageNum+x)
+	else:
+		for x in range(pageCut):
+			showPage.append((lastPageNum-4)+x)
+
+	# 전체글수 - 마지막페이지 전 페이지까지의 글 ///// 마전페 ~ (전체글수 - 마전페글)
+
+	if nowPage==lastPageNum:
+		for x in range(allPost-cutNum*(lastPageNum-1)):
+			showPost.append(posts[(cutNum*(nowPage-1))+x])
+	else:
+		for x in range(cutNum):
+			showPost.append(posts[(cutNum*(nowPage-1))+x])
+
+	print('showPage ====', showPage)
+	print('showPost ====', showPost)
+
+	return render(request, 'board/post_list.html', {'posts':showPost, 'pages':showPage})
 
 
-	return render(request, 'board/post_list.html', {'posts':showPost})
+
+
+
+
+
+
+
+
+
+
+
 
 def post_detail(request, pk):
 	post = get_object_or_404(Post, pk=pk)
