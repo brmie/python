@@ -3,7 +3,7 @@
 {% block content %}
 	{% for post in posts %}		
 		<div class="list">
-			<a href="{% url 'post_detail' pk=post.pk %}">
+			<a href="{% url 'post_detail' pk=post.pk nowPage=nowPage %}">
 				<span class="post-title">{{ post.title }}</span>
 				<span class="create-time">{{ post.author }} / {{ post.published_date }}</span>
 			</a>
