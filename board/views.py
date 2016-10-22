@@ -7,6 +7,13 @@ from django.contrib.auth.models import User
 from .models import Post
 from .forms import PostForm
 
+
+def post_list(request):
+	posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+	return render(request, 'board/post_list.html', {'posts':showPost, 'pages':showPage})
+
+
+
 def post_list(request, nowPage):
 
 	# 모든 포스트
