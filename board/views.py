@@ -3,6 +3,7 @@ from django.shortcuts import redirect
 from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
 from django.contrib.auth.models import User
+from math import *
 
 from .models import Post
 from .forms import PostForm
@@ -23,7 +24,7 @@ def post_list(request, nowPage):
 	allPost = posts.count()
 
 	# 현재페이지
-	nowPage = get_object_or_404(Integer, nowPage=int(nowPage))
+	nowPage = get_object_or_404(integer, nowPage=int(nowPage))
 
 	# 글 몇개씩 자를지
 	cutNum = 4
