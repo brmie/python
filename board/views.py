@@ -22,6 +22,9 @@ def post_list(request, nowPage):
 	# 총 포스트 23개
 	allPost = posts.count()
 
+	# 현재페이지
+	nowPage = int(nowPage)
+
 	# 글 몇개씩 자를지
 	cutNum = 4
 
