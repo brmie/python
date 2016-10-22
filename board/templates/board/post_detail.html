@@ -7,7 +7,7 @@
 		<p>{{ post.text }}</p>
 	</div>
 	<div class="buttons">
-		<a class="list-btn" href="{% url 'post_list' %}">&lt; Go to List</a>
+		<a class="list-btn" href="{% url 'post_list' nowPage=nowPage %}">&lt; Go to List</a>
 		<a class="edit-btn" href="{% url 'post_edit' pk=post.pk %}">Edit Post</a>
 		<a class="delete-btn" id="postDelete" href="#">Delete Post ㅠ.ㅠ</a>
 	</div>
