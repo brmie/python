@@ -23,7 +23,7 @@ def post_list(request, nowPage):
 	allPost = posts.count()
 
 	# 현재페이지
-	nowPage = get_object_or_404(klass, nowPage=int(nowPage))
+	nowPage = get_object_or_404(Integer, nowPage=int(nowPage))
 
 	# 글 몇개씩 자를지
 	cutNum = 4
