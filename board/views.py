@@ -15,6 +15,7 @@ from .forms import PostForm
 
 
 def post_list(request, nowPage):
+	post = get_object_or_404(Post, pk=pk)
 
 	# 모든 포스트
 	posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
@@ -23,7 +24,7 @@ def post_list(request, nowPage):
 	allPost = posts.count()
 
 	# 현재페이지
-	nowPage = int(nowPage)
+	nowPage = get_object_or_404(int, nowPage=int(nowPage))
 
 	# 글 몇개씩 자를지
 	cutNum = 4
