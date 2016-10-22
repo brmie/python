@@ -24,7 +24,7 @@ def post_list(request, nowPage):
 	allPost = posts.count()
 
 	# 현재페이지
-	nowPage = get_obj_or_404(int, nowPage=int(nowPage))
+	nowPage = int(nowPage)
 
 	# 글 몇개씩 자를지
 	cutNum = 4
@@ -124,13 +124,4 @@ def post_delete(request, pk):
 	post.delete()
 
 	return redirect('board.views.post_list')
-
-
-def get_obj_or_404(klass, *args, **kwargs):
-    try:
-        return klass.objects.get(*args, **kwargs)
-    except klass.DoesNotExist:
-        raise Http404
-
-
 
