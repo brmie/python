@@ -18,8 +18,8 @@ def main(request):
 def post_list(request, nowPage):
 
 	# 모든 포스트
-	posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-	
+	posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
+
 	# 총 포스트 23개
 	allPost = posts.count()
 
