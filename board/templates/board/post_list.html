@@ -1,14 +1,14 @@
 {% extends 'board/index.html' %}
 
 {% block content %}
-	{% for post in posts %}		
+	{# {% for post in posts %}		
 		<div class="list">
 			<a href="{% url 'post_detail' pk=post.pk %}">
 				<span class="post-title">{{ post.title }}</span>
 				<span class="create-time">{{ post.author }} / {{ post.published_date }}</span>
 			</a>
 		</div>
-	{% endfor %}
+	{% endfor %} #}
 
 	{# <div class="paging">
 		{% for page in pages %}
