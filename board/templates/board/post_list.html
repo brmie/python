@@ -12,7 +12,7 @@
 
 	<div class="paging">
 		{% for page in pages %}
-			<a href="{% url 'post_list' nowPage={{ page }} %}" class="page pageNum{{ page }}">{{ page }}</a>
+			<a href="{% url 'post_list' nowPage=page %}" class="page pageNum{{ page }}">{{ page }}</a>
 		{% endfor %}
 	</div>
 
