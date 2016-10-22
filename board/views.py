@@ -12,7 +12,8 @@ from .forms import PostForm
 # 	posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
 # 	return render(request, 'board/post_list.html', {'posts':showPost, 'pages':showPage})
 
-
+def main(request):
+	return redirect('board.views.post_list', nowPage=1)
 
 def post_list(request, nowPage):
 
