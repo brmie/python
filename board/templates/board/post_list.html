@@ -11,11 +11,9 @@
 	{% endfor %}
 
 	<div class="paging">
-		<a href="{% url 'post_list' nowPage=page %}" class="page pageNum{{ page }}">{{ page }}</a>
 		{% for page in pages %}
 			<a href="{% url 'post_list' nowPage=page %}" class="page pageNum{{ page }}">{{ page }}</a>
 		{% endfor %}
-		<a href="{% url 'post_list' nowPage=page %}" class="page pageNum{{ page }}">{{ page }}</a>
 	</div>
 
 	<div class="buttons">
