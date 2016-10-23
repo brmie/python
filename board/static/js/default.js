@@ -10,11 +10,12 @@ $(function(){
 
 	for(var i=0; i<pages.length; i++){
 		alert(pages[i]);
-		alert(pages[i].split('list/')[1]);
 
-		if(pages[i].split('list/')[1] == nowPageNum+'/'){
-			alert("hohoho");
-		}
+		pages[i].addClass('nowPage')
+
+		// if(pages[i].split('list/')[1] == nowPageNum+'/'){
+		// 	alert("hohoho");
+		// }
 
 		// if($pages[i].hasClass("pageNum"+nowPageNum)){
 		// 	$pages[i].addClass('nowPage');
