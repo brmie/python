@@ -4,12 +4,17 @@ $(function(){
 
 
 	var nowPageNum = location.pathname.split('/')[2];
-	var $pages = $('.page');
+	var pages = $('.page');
 
-	alert($pages);
+	alert(pages);
 
-	for(var i=0; i<$pages.length; i++){
-		alert($pages[i]);
+	for(var i=0; i<pages.length; i++){
+		alert(pages[i]);
+		alert(pages[i].split('list/')[1]);
+
+		if(pages[i].split('list/')[1] == nowPageNum+'/'){
+			alert("hohoho");
+		}
 
 		// if($pages[i].hasClass("pageNum"+nowPageNum)){
 		// 	$pages[i].addClass('nowPage');
