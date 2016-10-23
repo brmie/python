@@ -9,9 +9,7 @@ $(function(){
 	alert(pages);
 
 	for(var i=0; i<pages.length; i++){
-		alert(pages[i]);
-
-		pages[i].addClass('nowPage')
+		alert(pages[i].html());
 
 		// if(pages[i].split('list/')[1] == nowPageNum+'/'){
 		// 	alert("hohoho");
