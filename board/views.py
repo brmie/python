@@ -49,7 +49,7 @@ def post_list(request, nowPage):
 
 	if lastPageNum <= pageCut:
 		for x in range(lastPageNum):
-			showPage.append(x)
+			showPage.append(x+1)
 	else:
 		if startPageNum <= lastPageNum-4:
 			for x in range(pageCut):
