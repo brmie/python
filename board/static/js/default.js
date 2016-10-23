@@ -5,17 +5,11 @@ $(function(){
 
 	var nowPageNum = location.pathname.split('/')[2];
 	var nowPage = $("a[class='pageNum"+nowPageNum+"']");
-	var pages = $("a[class='page']");
+	// var pages = $("a[class='page']");
 
-	alert(nowPage.hasClass('page'));
 	alert(nowPage);
 
-
-	if(pages.hasClass('nowPage')){
-		pages.removeClass('nowPage')
-	}
-
-	nowPage.addClass('nowPage');
+	nowPage.toggleClass('nowPage');
 
 
 	// for(var i=0; i<pages.length; i++){
