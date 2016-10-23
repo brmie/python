@@ -39,6 +39,6 @@ textarea {width:100%; height:300px; border:none; border:2px #ccc solid;}
 	background:#d8a;
 }
 
-.paging {float: left;}
+.paging {float: left; width: 100%; text-align:center;}
 .page {color:red;}
 .page:hover {color:blue;}

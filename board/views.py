@@ -26,7 +26,7 @@ def post_list(request, nowPage):
 	nowPage = int(nowPage)
 
 	# 글 몇개씩 자를지
-	cutNum = 4
+	cutNum = 16
 
 	# 페이지 몇개씩 자를지
 	pageCut = 5
