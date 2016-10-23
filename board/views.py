@@ -39,18 +39,24 @@ def post_list(request, nowPage):
 		startPageNum = nowPage-2
 	else: startPageNum = 1
 
+
 	print('startPageNum ======', startPageNum)
 	print('lastPageNum ======', lastPageNum)
 
 	showPost = []
 	showPage = []
 
-	if startPageNum <= lastPageNum-4:
-		for x in range(pageCut):
-		 	showPage.append(startPageNum+x)
+
+	if lastPageNum <= pageCut:
+		for x in range(lastPageNum):
+			showPage.append(x)
 	else:
-		for x in range(pageCut):
-			showPage.append((lastPageNum-4)+x)
+		if startPageNum <= lastPageNum-4:
+			for x in range(pageCut):
+			 	showPage.append(startPageNum+x)
+		else:
+			for x in range(pageCut):
+				showPage.append((lastPageNum-4)+x)
 
 	# 전체글수 - 마지막페이지 전 페이지까지의 글 ///// 마전페 ~ (전체글수 - 마전페글)
 
