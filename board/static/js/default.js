@@ -4,10 +4,10 @@ $(function(){
 
 
 	var nowPageNum = location.pathname.split('/')[2];
-	var $pages = $('.pages');
+	var $pages = $('.pages')[0];
 
 	alert($pages);
-	
+
 	for(var i=0; i<$pages.length; i++){
 		if($pages[i].hasClass("pageNum"+nowPageNum)){
 			$pages[i].addClass('nowPage');
