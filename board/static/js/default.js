@@ -7,12 +7,14 @@ $(function(){
 	var nowPage = $("a[class='pageNum"+nowPageNum+"']");
 	var pages = $("a[class='page']");
 
+	alert(nowPage.hasClass('nowPage'));
 	alert(nowPage);
+
 
 	if(pages.hasClass('nowPage')){
 		pages.removeClass('nowPage')
 	}
-	
+
 	nowPage.addClass('nowPage');
 
 
