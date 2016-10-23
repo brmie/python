@@ -1,5 +1,7 @@
-window.onload = function(){
+$(function(){
 	// location.pathname ==> /list/1/
+
+	alert('hohoho');
 
 	var nowPageNum = location.pathname.split('/')[2];
 	var $pages = $('.pages');
@@ -15,4 +17,4 @@ window.onload = function(){
 			}
 		}
 	}
-}
+})
