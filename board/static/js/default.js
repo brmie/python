@@ -1,5 +1,6 @@
 window.onload = function(){
 	// location.pathname ==> /list/1/
-	alert(split(location.pathname)[2]);
+	var str = location.pathname;
+	alert(str.split('/')[2]);
 	// document.getElementsByClassName(location.pathname)
 }
