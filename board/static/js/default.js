@@ -7,7 +7,7 @@ $(function(){
 	var nowPage = $("a[class='pageNum"+nowPageNum+"']");
 	var pages = $("a[class='page']");
 
-	alert(nowPage.hasClass('nowPage'));
+	alert(nowPage.hasClass('page'));
 	alert(nowPage);
 
 
