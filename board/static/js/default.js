@@ -9,14 +9,16 @@ $(function(){
 	alert($pages);
 
 	for(var i=0; i<$pages.length; i++){
-		if($pages[i].hasClass("pageNum"+nowPageNum)){
-			$pages[i].addClass('nowPage');
-			alert('hoho1');
-		} else {
-			if($pages[i].hasClass('nowPage')){
-				$pages[i].removeClass('nowPage');
-				alert('hoho2');
-			}
-		}
+		alert($pages[i]);
+
+		// if($pages[i].hasClass("pageNum"+nowPageNum)){
+		// 	$pages[i].addClass('nowPage');
+		// 	alert('hoho1');
+		// } else {
+		// 	if($pages[i].hasClass('nowPage')){
+		// 		$pages[i].removeClass('nowPage');
+		// 		alert('hoho2');
+		// 	}
+		// }
 	}
 })
