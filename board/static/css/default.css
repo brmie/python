@@ -11,11 +11,13 @@ textarea {width:100%; height:300px; border:none; border:2px #ccc solid;}
 
 #title {color:#333;}
 
-.wrap {width:1180px; margin:0 auto;}
+.wrap {margin: 0 10%;}
 
-.list-wrap {width:100%; float:left; padding:0 0 50px 0;}
+.contentWrap {width:100%; float:left; padding:0 0 50px 0;}
+.list-wrap {width:100%; float:left;}
 
-.list {width:295px; margin:15px 0;float:left;}
+
+.list {width:33.3%; margin:15px 0;float:left;}
 .list:hover {background: #f3f3f3;}
 .list a {width: 100%; height: 100%; text-decoration: none; padding:15px; }
 
@@ -39,8 +41,15 @@ textarea {width:100%; height:300px; border:none; border:2px #ccc solid;}
 	background:#d8a;
 }
 
-.paging {float: left; width: 100%; text-align:center;}
-.page {color:#aaa; padding: 4px; border-radius:2px;}
+.paging {width: 100%; text-align:center;}
+.page {
+	float: left;
+    width: 15px;
+    height: 25px;
+    color: #aaa;
+    border-radius: 6px;
+    padding: 4px;
+}
 .page:hover {color:blue;}
 
 .nowPage {color:#fff; font-weight:bold; background:#a58;}

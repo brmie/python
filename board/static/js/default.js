@@ -1,32 +1,14 @@
 $(function(){
 	// location.pathname ==> /list/1/
 
-
-
 	var nowPageNum = location.pathname.split('/')[2];
 	var nowPage = $(".pageNum"+nowPageNum);
-	// var pages = $("a[class='page']");
-
-	alert(nowPage.attr('href'));
 
 	nowPage.addClass('nowPage');
 
+	var pagingWidth = $(".page").css('width');
+	alert(pagingWidth);
 
-	// for(var i=0; i<pages.length; i++){
-	// 	alert(pages[i]);
+	$(".paging").css('width', pagingWidth*2);
 
-	// 	// if(pages[i].split('list/')[1] == nowPageNum+'/'){
-	// 	// 	alert("hohoho");
-	// 	// }
-
-	// 	// if($pages[i].hasClass("pageNum"+nowPageNum)){
-	// 	// 	$pages[i].addClass('nowPage');
-	// 	// 	alert('hoho1');
-	// 	// } else {
-	// 	// 	if($pages[i].hasClass('nowPage')){
-	// 	// 		$pages[i].removeClass('nowPage');
-	// 	// 		alert('hoho2');
-	// 	// 	}
-	// 	// }
-	// }
 })

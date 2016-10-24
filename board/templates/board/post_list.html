@@ -1,6 +1,7 @@
 {% extends 'board/index.html' %}
 
 {% block content %}
+	<div class="list-wrap">
 	{% for post in posts %}		
 		<div class="list">
 			<a href="{% url 'post_detail' pk=post.pk nowPage=nowPage %}">
@@ -9,6 +10,7 @@
 			</a>
 		</div>
 	{% endfor %}
+	</div>
 
 	<div class="paging">
 		{% for page in pages %}
