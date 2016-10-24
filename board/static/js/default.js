@@ -7,8 +7,10 @@ $(function(){
 	nowPage.addClass('nowPage');
 
 	var pagingWidth = $(".page").css('width');
-	alert(pagingWidth);
 
-	$(".paging").css('width', pagingWidth*2);
+	alert(pagingWidth.split('px')[0]);
 
+	$(".paging").css('width', pagingWidth*2+'px');
+
+	alert(pagingWidth*2+'px')
 })
