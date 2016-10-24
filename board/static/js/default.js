@@ -9,7 +9,7 @@ $(function(){
 
 	alert(nowPage.attr('href'));
 
-	nowPage.toggleClass('nowPage');
+	nowPage.addClass('nowPage');
 
 
 	// for(var i=0; i<pages.length; i++){
