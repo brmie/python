@@ -4,7 +4,7 @@ $(function(){
 
 
 	var nowPageNum = location.pathname.split('/')[2];
-	var nowPage = $("a[class='pageNum"+nowPageNum+"']");
+	var nowPage = $("a[class='pageNum"+nowPageNum+"']").get(0);
 	// var pages = $("a[class='page']");
 
 	alert(nowPage.html());
