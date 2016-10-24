@@ -17,7 +17,7 @@ textarea {width:100%; height:300px; border:none; border:2px #ccc solid;}
 .list-wrap {width:100%; float:left;}
 
 
-.list {width:25%; margin:15px 0;float:left;}
+.list {width:25%;/* margin:15px 0;*/ padding:15px; float:left;}
 .list:hover {background: #f3f3f3;}
 .list a {width: 100%; height: 100%; text-decoration: none; padding:15px; }
 
@@ -42,15 +42,17 @@ textarea {width:100%; height:300px; border:none; border:2px #ccc solid;}
 }
 
 .paging {width:0; margin:0 auto; text-align:center;}
+
 .page {
 	float: left;
     width: 15px;
     height: 25px;
     color: #aaa;
     border-radius: 6px;
-    padding: 4px;
+    padding:4px 3px;
 }
-.page:hover {color:blue;}
+
+.page:hover {color:#d8a;}
 
 .nowPage {color:#fff; font-weight:bold; background:#a58;}
 

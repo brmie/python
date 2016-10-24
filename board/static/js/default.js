@@ -8,9 +8,6 @@ $(function(){
 
 	var pagingWidth = eval($(".page").css('width').split('px')[0]);
 
-	alert(pagingWidth);
-
 	$(".paging").css('width', pagingWidth*2+'px');
 
-	alert(pagingWidth*2+'px')
 })
