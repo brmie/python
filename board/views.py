@@ -83,12 +83,13 @@ def post_new(request, nowPage):
 		form = PostForm(request.POST)
 		if form.is_valid():
 			post = form.save(commit=False)
-			if request.user:
-				# post.author = User.objects.create_user('anonymous'+str(User.objects.all().count()), 'aa@aa.com', '1234')
-				post.author = User.objects.get(username='anonymous')
+			# if request.user:
+			# 	# post.author = User.objects.create_user('anonymous'+str(User.objects.all().count()), 'aa@aa.com', '1234')
+			# 	post.author = User.objects.get(username='anonymous')
 
-			else:
-				post.author = request.user
+			# else:
+			# 	post.author = request.user
+				
 			post.published_date = timezone.now()
 			post.save()
 			return redirect('board.views.post_detail', pk=post.pk, nowPage=nowPage)
