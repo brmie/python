@@ -7,7 +7,7 @@ $(function(){
 	var nowPage = $("a[class='pageNum"+nowPageNum+"']").get(0);
 	// var pages = $("a[class='page']");
 
-	alert(nowPage.html());
+	alert(nowPage);
 
 	nowPage.toggleClass('nowPage');
 
