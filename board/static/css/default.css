@@ -40,7 +40,7 @@ textarea {width:100%; height:300px; border:none; border:2px #ccc solid;}
 	background:#d8a;
 }
 
-.paging {width:0; margin:0 auto; text-align:center;}
+.paging {margin:0 auto; text-align:center;}
 
 .page {
 	float: left;
