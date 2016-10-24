@@ -4,10 +4,10 @@ $(function(){
 
 
 	var nowPageNum = location.pathname.split('/')[2];
-	var nowPage = $("a[class='pageNum"+nowPageNum+"']").get(0);
+	var nowPage = $("a[class='pageNum"+nowPageNum+"']");
 	// var pages = $("a[class='page']");
 
-	alert(nowPage);
+	alert(nowPage.attr('href');
 
 	nowPage.toggleClass('nowPage');
 
