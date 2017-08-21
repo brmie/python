@@ -20,7 +20,13 @@ textarea {width:100%; height:300px; border:none; border:2px #ccc solid;}
 .list:hover {background: #f3f3f3;}
 .list a {width: 100%; height: 100%; text-decoration: none; padding:20px; float: left;}
 
-.list span {display: block;}
+.list span {
+	display: block;
+	text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
 .post-title {font-size: 20pt; color:#a58; margin:0 0 10px 0;}
 .create-time {font-size: 11pt; color:#999;}
 
